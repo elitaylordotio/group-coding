@@ -1,0 +1,22 @@
+{
+  "name": "group-coding",
+  "version": "1.0.0",
+  "description": "Group coding practice",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "jest"
+  },
+  "author": "Eli Taylor",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/jest": "^29.5.8",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  }
+}
