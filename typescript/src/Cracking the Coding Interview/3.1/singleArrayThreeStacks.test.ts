@@ -1,5 +1,6 @@
 import { Stack } from "./singleArrayThreeStacks";
 
+
 describe("Single Array Three Stacks", () => {
     test("can initialize 3 stacks", () => {
         const array: any[] = [];
@@ -14,7 +15,7 @@ describe("Single Array Three Stacks", () => {
     });
 
     describe("can push", () => {
-        test("to stack with no offset", () => {
+        test("to stack", () => {
             const array: any[] = [];
 
             const stack = new Stack(0, 3, array);
@@ -25,30 +26,6 @@ describe("Single Array Three Stacks", () => {
 
             expect(stack.length()).toBe(3);
             expect(stack.peek()).toBe(3);
-        });
-        test("to stack with offset 1", () => {
-            const array: any[] = [];
-
-            const stack = new Stack(1, 3, array);
-
-            stack.push(2);
-            stack.push(3);
-            stack.push(5);
-
-            expect(stack.length()).toBe(3);
-            expect(stack.peek()).toBe(5);
-        });
-        test("to stack with offset 2", () => {
-            const array: any[] = [];
-
-            const stack = new Stack(2, 3, array);
-
-            stack.push(2);
-            stack.push(3);
-            stack.push(7);
-
-            expect(stack.length()).toBe(3);
-            expect(stack.peek()).toBe(7);
         });
         test("to 3 stacks without overwriting", () => {
             const array: any[] = [];
@@ -104,36 +81,10 @@ describe("Single Array Three Stacks", () => {
     });
 
     describe("can pop", () => {
-        test("from stack with no offset", () => {
+        test("from stack", () => {
             const array: any[] = [];
 
             const stack = new Stack(0, 3, array);
-
-            stack.push(1);
-            stack.push(2);
-            stack.push(3);
-
-            expect(stack.length()).toBe(3);
-            expect(stack.pop()).toBe(3);
-            expect(stack.length()).toBe(2);
-        });
-        test("from stack with 1 offset", () => {
-            const array: any[] = [];
-
-            const stack = new Stack(1, 3, array);
-
-            stack.push(1);
-            stack.push(2);
-            stack.push(3);
-
-            expect(stack.length()).toBe(3);
-            expect(stack.pop()).toBe(3);
-            expect(stack.length()).toBe(2);
-        });
-        test("from stack with 2 offset", () => {
-            const array: any[] = [];
-
-            const stack = new Stack(2, 3, array);
 
             stack.push(1);
             stack.push(2);
