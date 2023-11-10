@@ -96,6 +96,13 @@ export class SetOfStacks {
     return popValue
   }
 
+/*
+Comment from Galen: potAt(stackNumber:number) was only to pop from a specific stack not a specific item from a stack
+In addition. The way I could fix completely rejiggering all the stacks every time I pop something is that I could just
+set the value null. That stack is now 1 less and then when popping I ignore nulls and pop the next until I get a real
+value or the stacks are empty.
+
+*/ 
   popAt (stackIndex: number, index: number): number | undefined {
     const holdingStack: Stack = new Stack()
     if (this.length <= 0 || stackIndex > this.length) {
