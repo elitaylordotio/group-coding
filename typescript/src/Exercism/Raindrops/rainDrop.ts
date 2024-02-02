@@ -34,13 +34,18 @@ Multiple if statements are annoying plus in a function like this I would pull ou
 variable in a class and then use it in the function
 
 With my testing I have realized that I need to add a check for 0.
+I have also learned something new from the internet:
+
+"Zero is divisible by everything.
+When dividing zero by any number, the result is zero, with no remainder.
+Thus, by the definition of divisibility, zero is divisible by everything."
+
+Therefore my check for 0 which returns 0 is incorrect and I should return PlingPlangPlong
 
 Also we could make this a reduce function.
 */
 
 export function rainDrop (num: number): string {
-  if (num === 0) return '0'
-
   let result = ''
   const divisible = [
     { divisor: 3, sound: 'Pling' },

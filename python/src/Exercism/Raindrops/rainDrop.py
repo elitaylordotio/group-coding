@@ -19,6 +19,8 @@
 #     30 is divisible by 3 and 5, but not 7, so the result would be "PlingPlang".
 #     34 is not divisible by 3, 5, or 7, so the result would be "34".
 
+# Changing my answer due to information from the typescript example
+
 def raindrop(number):
     result = ''
     divisible = [
@@ -26,9 +28,6 @@ def raindrop(number):
         (5, 'Plang' ),
         (7, 'Plong')
     ]
-
-    if number == 0:
-        return '0'
     
     for (divisible, sound) in divisible:
         if number % divisible == 0:
